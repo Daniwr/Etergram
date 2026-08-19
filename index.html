@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="pages/index.css">
+</head>
+<body>
+    
+    <header>
+
+        <div class="header-left">
+            <img class="header-logo" src="./images/etergram-logo.jpg" alt="Etergram Logo">
+            <h3><a href="#">ETERGRAM</a></h3>
+        </div>
+        
+        <nav class="nav">
+            <ul class="nav-links">
+                <li class="nav-link">Iniciar Sesion</li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main>
+
+        <section class="top">
+            <div class="top-container">
+                <div class="top-left">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXHEQdpOSTcD5KVDm2bUKMjvBbOL3BXtatrVTfJh5H0Mmw-6tAXk4EgLw&s=10" alt="Federico Vilar">
+                </div>
+                <div class="top-middle">
+                    <div class="user-info">
+                        <h2 class="user-info-name" id="card__name" >Javier Aguirre</h2>
+                        <p class="user-info-description" id="card__description">Director Tecnico</p>
+                        <button class="user-info-edit top-button">Editar usuario</button>
+                        <button class="new-user-info top-button">Agregar Tarjeta</button>
+                    </div>
+                </div>
+                <div class="top-right">
+                    
+                </div>
+            </div>
+
+            <div class="popup-user" id="popup-user" style="display: none;">
+                <div class="popup-container">
+                    <div class="popup-title">
+                        <h3>Editar Jugador</h3>
+                    </div>
+                    <form action="" class="form-edit">
+                        <div class="popup-content">
+                            <div class="form-group">
+                                <label class="form-label" for="edit__name">Nombre</label>
+                                <input type="text" class="form-input" name="name" id="edit__name" required></input>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="edit__description">Descripcion</label>
+                                <input type="text" class="form-input" name="description" id="edit__description" required></input>
+                            </div>
+                        </div>
+                        <div class="popup-buttons">
+                            <button type="submit" class="form-button popup-saveData">Save</button>
+                            <button type="button" class="popup-close form-button">Cerrar</button>
+                        </div>
+                    </form>
+                </div>
+                
+            </div>
+
+            <div class="popup-card" id="popup-card" style="display: none;">
+                <div class="popup-container">
+                    <div class="popup-title">
+                        <h3>Agregar Jugador</h3>
+                    </div>
+                    <form action="" class="form-player">
+                        <div class="popup-content">
+                            <div class="form-group">
+                                <label class="form-label" for="card__player__name">Nombre</label>
+                                <input type="text" class="form-input form-player-input" name="name" id="card__player__name" required></input>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="card__player__description">Descripcion</label>
+                                <input type="text" class="form-input form-player-input" name="description" id="card__player__description" required></input>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="card__player__img">Imagen(URL)</label>
+                                <input type="text" class="form-input form-player-input" name="card-imagen" id="card__player__img" required></input>
+                            </div>
+                        </div>
+                        <div class="popup-buttons">
+                            <button type="submit" class="form-button popup-saveData">Save</button>
+                            <button type="button" class="popup-close form-button">Cerrar</button>
+                        </div>
+                    </form>
+                    
+                </div>
+                
+            </div>
+        </section>
+
+        <section class="content">
+
+            <h2 class="content-title">Seleccion Nacional Mexicana (Convocados)</h2>
+
+            <div class="card-container">
+
+            </div>
+            
+        </section>
+        
+    </main>
+
+    <footer>
+
+        <div class="footer-content">
+            <p>&copy; 2026 Doustan Mireles. Todos los derechos reservados.</p>
+            <ul class="footer-links">
+                <li><a href="#">Política de privacidad</a></li>
+                <li><a href="#">Términos de servicio</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </div>
+
+    </footer>
+
+    <template id="card__template">
+        <div class="card">
+            <img class="card__image" src="./images/julian-quiñones.jpg" alt="Julian Quiñones">
+            <h2 class="card__name">Julian Quiñones</h2>
+            <p class="card__description">Atacante (EI)</p>
+
+            <button class="card__button__like">Like</button>
+            <button class="card__button__delete">Eliminar</button>
+        </div>
+    </template>
+
+    <script src="./scripts/script.js"></script>
+</body>
+</html>

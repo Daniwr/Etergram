@@ -1,0 +1,122 @@
+.card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    width: 100%;
+    max-width: 320px;
+    min-height: 420px;
+    min-width: 0;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+
+.card__name {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.card__description {
+    font-size: 15px;
+    color: #666;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.card__button__like {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    padding: 8px 12px;
+    background-color: #d6d5d5;
+    color: black;
+    border: 1px solid #676767;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.card__button__like:hover {
+    background-color: #2f51ce;
+    color: white;
+}
+
+.liked {
+    background-color: #2f51ce;
+    color: white;
+}
+
+.card__button__delete {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    padding: 8px 12px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.card__button__delete:hover {
+    background-color: #da190b;
+}
+
+@media (max-width: 768px) {
+    .card {
+        padding: 15px;
+        max-width: 280px;
+    }
+    
+    .card__name {
+        font-size: 18px;
+    }
+    
+    .card img {
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        padding: 12px;
+        max-width: 150px;
+    }
+    
+    .card img {
+        height: 100px;
+    }
+    
+    .card__name {
+        font-size: 16px;
+    }
+    
+    .card__description {
+        font-size: 13px;
+    }
+}

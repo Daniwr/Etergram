@@ -1,0 +1,36 @@
+.popup-open {
+    display: block !important;
+}
+
+@media (max-width: 768px) {
+    .popup-user,
+    .popup-card {
+        max-width: 90vw;
+        max-height: 90vh;
+        padding: 20px;
+    }
+    
+    .popup-container {
+        padding: 15px !important;
+    }
+    
+    .form-group {
+        width: 100% !important;
+    }
+    
+    .form-input {
+        width: 100% !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .popup-user,
+    .popup-card {
+        max-width: 95vw;
+        padding: 15px;
+    }
+    
+    .popup-container {
+        padding: 10px !important;
+    }
+}

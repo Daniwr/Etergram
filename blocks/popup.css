@@ -1,0 +1,262 @@
+/* Overlay para los popups */
+body.popup-active {
+    overflow: hidden;
+}
+
+body.popup-active::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.popup-user {
+    padding: 0;
+    min-height: auto;
+    height: auto;
+    width: min(450px, calc(100vw - 24px));
+    border-radius: 12px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    display: none;
+}
+
+.popup-card {
+    padding: 0;
+    min-height: auto;
+    height: auto;
+    width: min(450px, calc(100vw - 24px));
+    border-radius: 12px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    overflow-y: auto;
+    max-height: 90vh;
+    display: none;
+}
+
+.popup-container {
+    width: 100%;
+    height: 100%;
+    gap: 0;
+    margin-bottom: 0;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    align-items: stretch;
+    overflow-y: auto;
+}
+
+.popup-title {
+    padding: 25px 25px 15px 25px;
+    border-bottom: 1px solid #eee;
+    flex-shrink: 0;
+}
+
+.popup-title h3 {
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    font-size: 20px;
+    color: #333;
+    font-weight: 600;
+}
+
+.popup-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    align-items: center;
+    padding: 25px;
+    flex-grow: 1;
+}
+
+.popup-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+    padding: 20px 25px;
+    border-top: 1px solid #eee;
+    background-color: #f9f9f9;
+    border-radius: 0 0 12px 12px;
+    flex-shrink: 0;
+}
+
+.form-button {
+    padding: 10px 24px;
+    border-radius: 6px;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    color: white;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    flex: 1;
+    max-width: 150px;
+}
+
+.popup-saveData {
+    background-color: #4CAF50;
+}
+
+.popup-close {
+    background-color: #cb1b1b;
+}
+
+.popup-close:active,
+.popup-saveData:active {
+    transform: translateY(0);
+}
+
+.form-edit {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.form-player {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+    gap: 6px;
+    width: 100%;
+    align-items: flex-start;
+}
+
+.form-label {
+    font-weight: 600;
+    font-size: 14px;
+    color: #333;
+    text-align: start;
+    width: 100%;
+}
+
+.form-input {
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: inherit;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    width: 100%;
+    align-self: stretch;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+}
+
+.form-player label {
+    margin-bottom: 0;
+    margin-left: 0;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.form-player input {
+    margin-bottom: 0;
+    padding: 10px 12px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    align-self: stretch;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .popup-user,
+    .popup-card {
+        max-width: 90vw;
+        max-height: 90vh;
+    }
+    
+    .popup-container {
+        padding: 0;
+    }
+    
+    .popup-content {
+        padding: 20px;
+    }
+    
+    .popup-buttons {
+        padding: 15px 20px;
+        flex-wrap: wrap;
+    }
+    
+    .form-button {
+        max-width: 100%;
+        flex: 0 0 calc(50% - 6px);
+    }
+}
+
+@media (max-width: 480px) {
+    .popup-user,
+    .popup-card {
+        max-width: 95vw;
+    }
+    
+    .popup-content {
+        padding: 15px;
+    }
+    
+    .popup-buttons {
+        padding: 12px 15px;
+        flex-direction: column;
+    }
+    
+    .form-button {
+        width: 100%;
+        max-width: 100%;
+        flex: 0 0 auto;
+    }
+    
+    .popup-title h3 {
+        font-size: 18px;
+    }
+}
+    width: 100%;
+}
+
+.form-input {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    font-family: inherit;
+    transition: border-color 0.3s;
+    width: 80%;
+    align-self: flex-start;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+}
+

@@ -1,0 +1,27 @@
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-link {
+    font-size: 14px;
+    cursor: pointer;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #3498db;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        gap: 10px;
+    }
+    
+    .nav-link {
+        font-size: 12px;
+    }
+}
