@@ -44,6 +44,9 @@ const createCard = (jugador) => {
     const cardImage = card.querySelector(".card__image");
     const cardDescription = card.querySelector(".card__description");
     const likeButton = card.querySelector(".card__button__like");
+    const dislikeButton = card.querySelector(".card__button__dislike");
+    const likeCount = card.querySelector(".button__like__count");
+    const dislikeCount = card.querySelector(".button__dislike__count");
 
     cardTitle.textContent = jugador.title;
 
@@ -52,9 +55,38 @@ const createCard = (jugador) => {
 
     cardDescription.textContent = jugador.description;
 
+
     likeButton.addEventListener("click", () => {
-        likeButton.classList.toggle("liked");
-    });
+    const liked = likeButton.classList.contains("liked");
+
+    if (liked) {
+        likeButton.classList.remove("liked");
+        likeCount.textContent = 0;
+        
+    } else {
+        likeButton.classList.add("liked");
+        dislikeButton.classList.remove("disliked");
+
+        likeCount.textContent = 1;
+        dislikeCount.textContent = 0;
+    }
+});
+
+dislikeButton.addEventListener("click", () => {
+    const disliked = dislikeButton.classList.contains("disliked");
+
+    if (disliked) {
+        dislikeButton.classList.remove("disliked");
+        dislikeCount.textContent = 0;
+
+    } else {
+        dislikeButton.classList.add("disliked");
+        likeButton.classList.remove("liked");
+
+        dislikeCount.textContent = 1;
+        likeCount.textContent = 0;
+    }
+});
 
     container.append(card);
 };

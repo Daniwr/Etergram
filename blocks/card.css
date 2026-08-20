@@ -43,9 +43,18 @@
     margin-bottom: 16px;
 }
 
-.card__button__like {
+.card-buttons {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 0 15px;
     position: absolute;
     bottom: 15px;
+}
+
+.card__button__like {
+    position: absolute;
+    bottom: 10px;
     left: 15px;
     padding: 8px 12px;
     background-color: #d6d5d5;
@@ -58,6 +67,24 @@
     transition: background-color 0.3s ease;
 }
 
+.button__like__count {
+    position: absolute;
+    bottom: 45px;
+    left: 35px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #333;
+}
+
+.button__dislike__count {
+    position: absolute;
+    bottom: 45px;
+    left: 106px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #333;
+}
+
 .card__button__like:hover {
     background-color: #2f51ce;
     color: white;
@@ -65,6 +92,31 @@
 
 .liked {
     background-color: #2f51ce;
+    color: white;
+}
+
+.card__button__dislike {
+    position: absolute;
+    bottom: 10px;
+    left: 80px;
+    padding: 8px 12px;
+    background-color: #d6d5d5;
+    color: black;
+    border: 1px solid #676767;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.card__button__dislike:hover {
+    background-color: #f44336;
+    color: white;
+}
+
+.disliked {
+    background-color: #f44336;
     color: white;
 }
 
