@@ -34,7 +34,6 @@ const initialData = [
     }
 ];
 
-let data = JSON.parse(localStorage.getItem("players")) || initialData;
 
 const createCard = (jugador) => {
 
@@ -158,7 +157,6 @@ formPlayer.addEventListener("submit", (e) => {
 
     data.push(jugador);
     
-    localStorage.setItem("players", JSON.stringify(data));
     createCard(jugador);
     popupCard.style.display = "none";
     document.body.classList.remove("popup-active");
